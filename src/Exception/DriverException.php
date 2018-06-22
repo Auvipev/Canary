@@ -6,12 +6,13 @@ declare(strict_types=1);
 
 namespace Canary\Cache\Exception;
 
+use Exception;
+
 /**
- * The driver exception.
- *
  * @class      DriverException.
+ * @extends    Exception.
  * @implements ExceptionInterface.
  */
-class DriverException implements ExceptionInterface
+class DriverException extends Exception implements ExceptionInterface
 {
 }
