@@ -16,3 +16,4 @@ use Exception;
 class DriverException extends Exception implements ExceptionInterface
 {
 }
+
