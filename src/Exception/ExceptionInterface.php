@@ -9,8 +9,6 @@ namespace Canary\Cache\Exception;
 use Throwable;
 
 /**
- * The exception interface.
- *
  * @interface ExceptionInterface.
  * @extends   Throwable.
  */
