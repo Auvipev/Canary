@@ -12,12 +12,6 @@ declare(strict_types=1);
  * under the same license. Copyright and license notices must be preserved. Contributors provide
  * an express grant of patent rights.
  *
- * @link <https://www.php-fig.org/psr/psr-6/>.
- *
- * A common interface for caching systems will solve these problems. Library and framework developers
- * can count on the caching systems working the way they're expecting, while the developers of caching systems
- * will only have to implement a single set of interfaces rather than a whole assortment of adapters.
- *
  * @package Auvipev/Canary.
  */
 
