@@ -11,4 +11,4 @@ The best way to install this cache library is through composer. If you do not ha
 composer require auvipev/canary
 ```
 
-That's it Enjoy!
+## License
