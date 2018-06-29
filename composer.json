@@ -1,6 +1,6 @@
 {
     "name": "auvipev/canary",
-    "description": "A PSR-6 compliant cache library.",
+    "description": "A secure by default PSR-6 compliant cache library.",
     "license": "GPL-3.0",
     "keywords": [
         "php7",
