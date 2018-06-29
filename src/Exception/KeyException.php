@@ -11,8 +11,9 @@ use Psr\Cache\InvalidArgumentException;
 
 /**
  * @class      KeyException.
- * @extends    InvalidArgumentException.
+ * @extends    Exception.
  * @implements ExceptionInterface.
+ * @implements InvalidArgumentException.
  */
 class KeyException extends Exception implements ExceptionInterface, InvalidArgumentException
 {
