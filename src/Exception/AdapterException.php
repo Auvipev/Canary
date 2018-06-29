@@ -9,10 +9,10 @@ namespace Canary\Cache\Exception;
 use Exception;
 
 /**
- * @class      DriverException.
+ * @class      AdapterException.
  * @extends    Exception.
  * @implements ExceptionInterface.
  */
-class DriverException extends Exception implements ExceptionInterface
+class AdapterException extends Exception implements ExceptionInterface
 {
 }
