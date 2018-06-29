@@ -11,8 +11,9 @@ use Psr\Cache\CacheException;
 
 /**
  * @class      AdapterException.
- * @extends    InvalidArgumentException.
+ * @extends    Exception.
  * @implements ExceptionInterface.
+ * @implements InvalidArgumentException.
  */
 class AdapterException extends Exception implements ExceptionInterface, CacheException
 {
