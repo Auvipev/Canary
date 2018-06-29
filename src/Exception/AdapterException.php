@@ -7,12 +7,13 @@ declare(strict_types=1);
 namespace Canary\Cache\Exception;
 
 use Exception;
+use Psr\Cache\CacheException;
 
 /**
  * @class      AdapterException.
- * @extends    Exception.
+ * @extends    InvalidArgumentException.
  * @implements ExceptionInterface.
  */
-class AdapterException extends Exception implements ExceptionInterface
+class AdapterException extends Exception implements ExceptionInterface, CacheException
 {
 }
