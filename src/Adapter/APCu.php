@@ -22,6 +22,7 @@ use function apcu_cache_info;
 use function apcu_exists;
 use function apcu_clear_cache;
 use function apcu_delete;
+use function apcu_store;
 
 /**
  * APCu is APC stripped of opcode caching. The first APCu codebase was versioned 4.0.0, it was
