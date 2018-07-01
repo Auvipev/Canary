@@ -23,6 +23,12 @@
         "php": ">=7.0",
         "psr/cache": "^1.0"
     },
+    "suggest": {
+        "league/flysystem": "If you are using the FileSystem cache adapter.",
+        "ext-wincache": "If you are using the WinCache cache adapter.",
+        "ext-apcu": "If you are using the APCu cache adapter."
+        "ext-xcache": "If you are using the XCache cache adapter."
+    }
     "require-dev": {
         "phpunit/phpunit": "^6.5|^7.1"
     },
