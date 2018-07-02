@@ -39,6 +39,10 @@ class WinCache implements CacheItemPoolInterface
      */
     private $deferredItems = [];
 
+    public function __construct()
+    {
+    }
+
     /**
      * Returns a Cache Item representing the specified key.
      *
