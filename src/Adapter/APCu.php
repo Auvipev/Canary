@@ -174,8 +174,8 @@ class APCu implements CacheItemPoolInterface
      */
     public function save(CacheItemInterface $item)
     {
-        if ($this->hasItem($key)) {
-            $this->deleteItem($key);
+        if ($this->hasItem($item->getKey())) {
+            $this->deleteItem($item->getKey());
         }
         return apcu_store($item->getKey(), $item->getKey(), $item->ttl);
     }
