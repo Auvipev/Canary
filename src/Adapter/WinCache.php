@@ -16,6 +16,7 @@ use Canary\Cache\Exception\KeyException;
 use Canary\Cache\Item as CacheItem;
 
 use function is_string;
+use function intval;
 use function wincache_ucache_get;
 use function wincache_ucache_info;
 use function wincache_ucache_exists;
@@ -63,7 +64,7 @@ class WinCache implements CacheItemPoolInterface
         $value = wincache_ucache_get($key, $success);
         if ($success) {
             $info = wincache_ucache_info(false, $key);
-            return new CacheItem($key, $value, $info['ttl']);
+            return new CacheItem($key, $value, intval($info['ttl']));
         }
         return new CacheItem();
     }
