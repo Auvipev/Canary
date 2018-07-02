@@ -12,7 +12,7 @@ os:
     - windows
     - linux
 before_install:
-    - git clone -b stable https://github.com/php/pecl-caching-wincache.git
+    - git clone https://github.com/php/pecl-caching-wincache.git
     - cd wincache && sudo ./configure && sudo make check && sudo make install && cd ..
 install:
     - pecl channel-update pecl.php.net
