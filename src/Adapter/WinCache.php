@@ -23,6 +23,7 @@ use function wincache_ucache_info;
 use function wincache_ucache_exists;
 use function wincache_ucache_clear;
 use function wincache_ucache_set;
+use function wincache_ucache_meminfo;
 
 /**
  * Windows Cache Extension for PHP is a PHP accelerator that is used to increase the speed
