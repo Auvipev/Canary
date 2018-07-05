@@ -206,4 +206,17 @@ class APCu implements CacheItemPoolInterface, StatisticsInterface, ExtendedPSR6I
         }
         return true;
     }
+
+    /**
+     * Output the cache pool statistics.
+     *
+     * @return array Returns an array full of info.
+     */
+    public function statistics()
+    {
+        return [
+            'main' => apcu_cache_info(),
+            'memory' => apcu_sma_info()
+        ];
+    }
 }
