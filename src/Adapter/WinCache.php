@@ -13,6 +13,8 @@ use Traversable;
 use Psr\Cache\CacheItemInterface;
 use Psr\Cache\CacheItemPoolInterface;
 use Canary\Cache\Exception\KeyException;
+use Canary\Cache\StatisticsInterface;
+use Canary\Cache\ExtendedPSR6Interface;
 use Canary\Cache\Item as CacheItem;
 
 use function is_string;
@@ -31,11 +33,11 @@ use function wincache_ucache_set;
  * @class      WinCache.
  * @implements CacheItemPoolInterface.
  */
-class WinCache implements CacheItemPoolInterface
+class WinCache implements CacheItemPoolInterface, StatisticsInterface, ExtendedPSR6Interface
 {
 
     /**
-     * @var array $this->deferredItems 
+     * @var array $this->deferredItems
      */
     private $deferredItems = [];
 
@@ -196,5 +198,18 @@ class WinCache implements CacheItemPoolInterface
             }
         }
         return true;
+    }
+
+    /**
+     * Output the cache pool statistics.
+     *
+     * @return array Returns an array full of info.
+     */
+    public function statistics()
+    {
+        return [
+            'main' => wincache_ucache_info(true),
+            'memory' => wincache_ucache_meminfo()
+        ];
     }
 }
