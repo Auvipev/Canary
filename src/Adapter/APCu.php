@@ -32,7 +32,7 @@ use function apcu_store;
  * @class      APCu.
  * @implements CacheItemPoolInterface.
  */
-class APCu implements CacheItemPoolInterface
+class APCu implements CacheItemPoolInterface, StatisticsInterface, ExtendedPSR6Interface
 {
 
     /**
